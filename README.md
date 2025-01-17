@@ -24,3 +24,4 @@ I am currently seeking internships or entry-level opportunities in software deve
 
 - **Email:** [unavrgjoe@gmail.com](mailto:unavrgjoe@gmail.com)
 - **LinkedIn:** [Joseph Gross](www.linkedin.com/in/joseph-gross-a5a07a347)
+- **Phone:** (636) 485-9156
