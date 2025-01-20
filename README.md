@@ -17,6 +17,8 @@ This repository showcases schoolwork and personal projects.
 
 - ### 3. Data Structures and Misc. Work with Algorithms
 - **Tools:** C++, Python
+- *The red black tree is essentially a binary search tree that autobalances when new data is added*
+    
 
 ## **Contact**
 
