@@ -18,6 +18,7 @@ This repository showcases schoolwork and personal projects.
 - ### 3. Data Structures and Misc. Work with Algorithms
 - **Tools:** C++, Python
 - *The red black tree is essentially a binary search tree that autobalances when new data is added*
+- *The file implementing Huffman Compression allows users to compress a text file into a smaller, encoded file using a frequency-based binary tree*
     
 
 ## **Contact**
