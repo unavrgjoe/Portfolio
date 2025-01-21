@@ -1,0 +1,7 @@
+title: "J Gross Portfolio"
+description: "Showcasing my projects and skills in computer science"
+theme: jekyll-theme-time-machine
+baseurl: "/Portfolio" # Replace <repository-name> with your repo name
+url: "https://unavrgjoe.github.io" # Replace <your-username> with your GitHub username
+author: 
+  name: "Joseph Gross"
