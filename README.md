@@ -19,6 +19,7 @@ This repository showcases schoolwork and personal projects.
 - **Tools:** C++, Python
 - *The red black tree is essentially a binary search tree that autobalances when new data is added*
 - *The file implementing Huffman Compression allows users to compress a text file into a smaller, encoded file using a frequency-based binary tree*
+- *The KNN file is classwork writing the K-Nearest Neighbors Classifier Algorithm from scratch* 
     
 
 ## **Contact**
