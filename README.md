@@ -22,17 +22,13 @@ This repository showcases schoolwork and personal projects.
 - *The KNN file is classwork writing the K-Nearest Neighbors Classifier Algorithm from scratch*
 
 ### Repository Files
-<h1>Repository Folders</h1>
-
 <ul>
-  {% assign folders = site.static_files | map: "path" | uniq %}
-  {% for folder in folders %}
-    {% assign parts = folder | split: "/" %}
-    {% assign folder_name = parts[0] %}
+  {% for folder in site.static_files %}
+    {% assign folder_name = folder.path | split: "/" | first %}
     {% if folder_name != "." and folder_name != "" %}
       <li>
-        <strong>{{ folder_name }}</strong>
-        <ul>
+        <span class="folder">{{ folder_name }}</span>
+        <ul class="folder-content">
           {% for subfile in site.static_files %}
             {% if subfile.path contains folder_name %}
               <li><a href="{{ subfile.path }}">{{ subfile.name }}</a></li>
