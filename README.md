@@ -23,9 +23,14 @@ This repository showcases schoolwork and personal projects.
 
 ### Repository Files
 <ul>
-{% for file in site.static_files %}
-    <li><a href="{{ file.path }}">{{ file.name }}</a></li>
-{% endfor %}
+  {% for folder in site.static_files %}
+    {% assign folder_name = folder.path | split: "/" | first %}
+    {% if folder_name != "." and folder_name != "" %}
+      <li>
+        <a href="{{ folder_name }}/">{{ folder_name }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
 </ul>
     
 
