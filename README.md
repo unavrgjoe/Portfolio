@@ -5,8 +5,8 @@ This repository showcases schoolwork and personal projects.
 
 ## **Featured Projects**
 
-- ### 1. **Data Analysis with Python**
-- [Data Analysis](Data%20Analysis/)
+- ### 1. Data Analysis with Python
+  [Data Analysis](Data%20Analysis/)
 - **Tools:** Python, Pandas, CuDA, Matplotlib (and Weka)
 - *Analyzed and contrasted predicitive models to grade pharmaceutical reviews.  Highlighting skills in data manipulation and statistical analysis.*
 - *Applied machine learning algorithms to demonstrate their capacity to predict obesity levels given biometric and lifestyle information. Furthering skills in data analysis.*
