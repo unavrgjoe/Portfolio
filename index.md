@@ -7,13 +7,13 @@ title: Joseph Gross - Portfolio
 <section class="hero-section">
   <div class="intro">
     <h1>Joseph Gross</h1>
-    <p class="tagline">CS Senior • Full-Stack Developer • 290+ GitHub Contributions in 2025</p>
+    <p class="tagline">CS Senior  •  Full-Stack Developer  •  290+ GitHub Contributions in 2025</p>
   </div>
 </section>
 
 <section class="featured-project" id="elomath">
   <div class="project-header">
-    <h2>EloMath - Competitive Math Battles</h2>
+    <h2>EloMath - Educational Mobile Game</h2>
     <div class="project-badges">
       <span class="badge">Unity</span>
       <span class="badge">React Native</span>
@@ -30,7 +30,7 @@ title: Joseph Gross - Portfolio
   <div class="demo-grid">
     <figure class="demo-video">
       <video autoplay loop muted playsinline width="360" height="780">
-        <source src="{{ site.baseurl }}/assets/videos/elomath-queue.mp4" type="video/mp4">
+        <source src="{{ site.baseurl }}/assets/elomath-queue.mp4" type="video/mp4">
         <!-- <img src="{{ site.baseurl }}/assets/images/elomath-queue-fallback.jpg" alt="Queue flow"> -->
       </video>
       <figcaption>Matchmaking → Connect (React Native)</figcaption>
@@ -38,7 +38,7 @@ title: Joseph Gross - Portfolio
 
     <figure class="demo-video">
       <video autoplay loop muted playsinline width="360" height="780">
-        <source src="{{ site.baseurl }}/assets/videos/elomath-gameplay.mp4" type="video/mp4">
+        <source src="{{ site.baseurl }}/assets/elomath-gameplay.mp4" type="video/mp4">
         <!-- <img src="{{ site.baseurl }}/assets/images/elomath-gameplay-fallback.jpg" alt="Gameplay"> -->
       </video>
       <figcaption>Real-time PvP gameplay (Unity)</figcaption>

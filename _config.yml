@@ -12,5 +12,5 @@ author:
 
 
 navbar-links:
-  Projects: "/Portfolio/projects/"
-  Résumé: "/Portfolio/assets/resume.pdf"
+  # Projects: "/Portfolio/projects/"
+  Résumé: "/assets/resume.pdf"
