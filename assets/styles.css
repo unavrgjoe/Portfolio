@@ -1,28 +1,29 @@
 :root{
-  --bg: #0b0c10;
-  --bg-soft: #11131a;
-  --txt: #e6e7eb;
-  --muted: #a9afbd;
-  --brand: #0ea5e9;
-  --card: #121622;
-  --ring: rgba(14,165,233,.35);
+  --bg: #e0fbfc;
+  --bg-soft: #ffffff;
+  --txt: #293241;
+  --muted: #3d5a80;
+  --brand: #ee6c4d;
+  --card: #ffffff;
+  --ring: rgba(238,108,77,.35); /*burnt orange may need to go */
 }
 
 /* 
 TODO remove what isnt used */
 
-@media (prefers-color-scheme: light){
+/*erm light theming is now default anyways*/
+/* @media (prefers-color-scheme: light){
   :root{
-    --bg:#f8fafc; --bg-soft:#fff; --txt:#0f172a; --muted:#475569; --card:#fff; --ring: rgba(14,165,233,.25); /* bg was f8fafc */
+    --bg:#f8fafc; --bg-soft:#fff; --txt:#0f172a; --muted:#475569; --card:#fff; --ring: rgba(14,165,233,.25); 
   }
-}
+} */
 
 html,body{height:100%;}
 body{
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(14,165,233,.12), transparent 60%),
-    radial-gradient(1000px 500px at 90% -20%, rgba(168,85,247,.10), transparent 60%),
-    linear-gradient(180deg, var(--bg), var(--bg));
+  radial-gradient(1200px 600px at 10% -10%, rgba(238,108,77,.08), transparent 60%),  /* Orange tint */
+  radial-gradient(1000px 500px at 90% -20%, rgba(61,90,128,.06), transparent 60%),   /* Navy tint */
+  linear-gradient(180deg, var(--bg), #ffffff);  /* Light cyan to white */
   color: var(--txt);
   font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
@@ -35,9 +36,9 @@ a:hover{text-decoration: underline;}
 /* Page title neon-ish */
 .page-title, .post-title, h1{
   font-weight:800; letter-spacing:.2px;
-  background: linear-gradient(90deg, var(--brand), #a855f7);
+  background: linear-gradient(90deg, var(--brand), var(--muted));
   -webkit-background-clip:text; background-clip:text; color: transparent;
-  filter: drop-shadow(0 2px 16px rgba(14,165,233,.25));
+  filter: drop-shadow(0 2px 16px rgba(238,108,77,.25));
 }
 
 /* Cards / post previews */
@@ -47,9 +48,8 @@ a:hover{text-decoration: underline;}
   border-radius: 14px;
   padding: 20px;
   box-shadow:
-    0 1px 2px rgba(0,0,0,.25),
-    0 0 0 6px rgba(255,255,255,.01),
-    0 10px 40px rgba(14,165,233,.05);
+    0 1px 2px rgba(41,50,65,.15),
+    0 10px 40px rgba(238,108,77,.08);
 }
 
 /*  glowing outline */
@@ -79,45 +79,6 @@ img{border-radius: 12px;}
   margin: .25rem 0 0 0;
 }
 
-/* two-up layout that collapses on small screens */
-.screens {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 18px;
-  align-items: start;
-  margin-top: 12px;
-}
-.screens .device {
-  grid-column: span 6;
-  margin: 0;
-}
-
-/* iphone chrome */
-.device {
-  background: radial-gradient(100% 100% at 50% 0%, rgba(255,255,255,.06), rgba(255,255,255,.02));
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 28px;
-  padding: 10px;
-  box-shadow:
-    0 10px 40px rgba(14,165,233,.07),
-    0 0 0 6px rgba(255,255,255,.01);
-  backdrop-filter: saturate(120%);
-}
-.device img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 22px;         /* screen corners */
-  background: #000;            /* behind GIF edges */
-  image-rendering: auto;
-}
-.device figcaption {
-  text-align: center;
-  color: var(--muted);
-  font-size: .9rem;
-  margin-top: 8px;
-}
-
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -138,28 +99,53 @@ img{border-radius: 12px;}
 .hero-actions .btn:focus { outline: 0; box-shadow: 0 0 0 4px var(--ring); }
 
 /* responsive: stack the screens at < 900px */
-@media (max-width: 900px){
-  .screens .device { grid-column: 1 / -1; }
-}
-
-.demo-grid {
+.project-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr auto;  /* Text expands, videos fixed width */
   gap: 2rem;
-  margin: 2rem 0;
+  align-items: start;
 }
 
-.demo-video {
-  video {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+.project-description {
+  max-width: 600px;  /* Keeps text readable width */
+}
+
+/* Video container - side by side */
+.screens, .demo-grid {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Individual video styling */
+.device, .demo-video {
+  flex: 0 0 auto;  /* Don't grow or shrink */
+  width: 180px;    /* Fixed width for consistency */
+}
+
+.device video, .demo-video video {
+  width: 100%;
+  height: auto;
+  max-height: 390px;  /* Cap height for portrait videos */
+  object-fit: cover;  /* Crop if needed to maintain aspect */
+  border-radius: 22px;
+  background: #000;
+}
+
+.device figcaption, .demo-video figcaption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+/* Responsive - stacks everything vertically on mobile */
+@media (max-width: 900px) {
+  .project-content {
+     grid-template-columns: 1fr; /* one column */
   }
   
-  figcaption {
-    text-align: center;
-    margin-top: 0.5rem;
-    color: #666;
+  .screens, .demo-grid {
+    justify-content: center;
   }
 }

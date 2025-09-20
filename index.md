@@ -27,32 +27,21 @@ title: Joseph Gross - Portfolio
     Built with React Native for UI, Unity for online multiplayer matches, Mirror/KCP for networking, Supabase backend, and Edgegap-hosted servers. Recently achieved networked gameplay, with player queues in matchmaking.
   </p>
 
-  <div class="demo-grid">
-    <figure class="demo-video">
-      <video autoplay loop muted playsinline width="360" height="780">
-        <source src="{{ site.baseurl }}/assets/elomath-queue.mp4" type="video/mp4">
-        <!-- <img src="{{ site.baseurl }}/assets/images/elomath-queue-fallback.jpg" alt="Queue flow"> -->
-      </video>
-      <figcaption>Matchmaking → Connect (React Native)</figcaption>
-    </figure>
-
-    <figure class="demo-video">
-      <video autoplay loop muted playsinline width="360" height="780">
-        <source src="{{ site.baseurl }}/assets/elomath-gameplay.mp4" type="video/mp4">
-        <!-- <img src="{{ site.baseurl }}/assets/images/elomath-gameplay-fallback.jpg" alt="Gameplay"> -->
-      </video>
-      <figcaption>Real-time PvP gameplay (Unity)</figcaption>
-    </figure>
-
-  </div>
-
-  <div class="project-links">
-    <a href="https://github.com/unavrgjoe/elomath" class="btn btn-primary">
-      <i class="fab fa-github"></i> View Code
-    </a>
-    <a href="https://elomath.io" class="btn btn-secondary" target="_blank">
-      <i class="fas fa-play"></i> Live Demo
-    </a>
+  <div class="screens">  <!-- Right side with videos -->
+      <figure class="device">
+        <video autoplay loop muted playsinline>
+          <source src="{{ site.baseurl }}/assets/elomath-queue.mp4" type="video/mp4">
+        </video>
+        <figcaption>Matchmaking</figcaption>
+      </figure>
+      
+      <figure class="device">
+        <video autoplay loop muted playsinline>
+          <source src="{{ site.baseurl }}/assets/elomath-gameplay.mp4" type="video/mp4">
+        </video>
+        <figcaption>Gameplay</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
