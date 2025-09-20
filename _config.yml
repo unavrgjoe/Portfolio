@@ -6,7 +6,7 @@ plugins:
 - jekyll-remote-theme 
 baseurl: "/Portfolio" 
 url: "https://unavrgjoe.github.io" 
-site-css: /Portfolio/assets/styles.css
+site-css: /assets/styles.css
 author: 
   name: "Joseph Gross"
 

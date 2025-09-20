@@ -1,4 +1,3 @@
-/*   TODO remove what isnt used */
 :root{
   --bg: #0b0c10;
   --bg-soft: #11131a;
@@ -9,11 +8,12 @@
   --ring: rgba(14,165,233,.35);
 }
 
-
+/* 
+TODO remove what isnt used */
 
 @media (prefers-color-scheme: light){
   :root{
-    --bg:#293241; --bg-soft:#fff; --txt:#0f172a; --muted:#475569; --card:#fff; --ring: rgba(14,165,233,.25);
+    --bg:#f8fafc; --bg-soft:#fff; --txt:#0f172a; --muted:#475569; --card:#fff; --ring: rgba(14,165,233,.25); /* bg was f8fafc */
   }
 }
 
