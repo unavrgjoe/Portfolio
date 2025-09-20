@@ -100,27 +100,28 @@ img{border-radius: 12px;}
 
 /* responsive: stack the screens at < 900px */
 .project-content {
-  display: grid;
-  grid-template-columns: 1fr auto;  /* Text expands, videos fixed width */
+  display: flex;
+  /* grid-template-columns: 1fr auto;   Text expands, videos fixed width */
   gap: 2rem;
   align-items: start;
 }
 
 .project-description {
+  flex: 1; /* want it to take remaining space */
   max-width: 600px;  /* Keeps text readable width */
 }
 
-/* Video container - side by side */
+/* Video container -hopefully side by side */
 .screens, .demo-grid {
   display: flex;
   gap: 1rem;
+  display: flex;   /* So videos dont shrink */
   align-items: start;
 }
 
-/* Individual video styling */
 .device, .demo-video {
-  flex: 0 0 auto;  /* Don't grow or shrink */
-  width: 180px;    /* Fixed width for consistency */
+  flex: 0 0 auto;  /* Dont grow or shrink */
+  width: 180px;    /* fixed width for consistency */
 }
 
 .device video, .demo-video video {

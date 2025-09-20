@@ -22,6 +22,7 @@ title: Joseph Gross - Portfolio
     </div>
   </div>
   
+  <div class="project-content">
   <p class="project-description">
     Leading development of a real-time multiplayer mobile game combining education with competitive gameplay. 
     Built with React Native for UI, Unity for online multiplayer matches, Mirror/KCP for networking, Supabase backend, and Edgegap-hosted servers. Recently achieved networked gameplay, with player queues in matchmaking.
