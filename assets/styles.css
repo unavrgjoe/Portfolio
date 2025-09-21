@@ -18,6 +18,13 @@ TODO remove what isnt used */
   }
 } */
 
+/* for the container wrapping all the sections */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 html,body{height:100%;}
 body{
   background:
@@ -28,11 +35,34 @@ body{
 }
 
 section{
+  margin-bottom: 3rem;  /* Space between sections */
+  padding: 2rem;
+  border-radius: 14px;
+  overflow: visible;  /* Prevent text cutoff */
+  position: relative;
+  border-left: 4px solid var(--brand);
   background:
     radial-gradient(1200px 600px at 10% -10%, rgba(238,108,77,.08), transparent 60%),  /* Orange tint */
     radial-gradient(1000px 500px at 90% -20%, rgba(61,90,128,.06), transparent 60%),   /* Navy tint */
     linear-gradient(180deg, var(--bg), #ffffff),  /* Light cyan to white */
     var(--card);
+}
+section ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+section li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+section:nth-child(even) {
+  background: 
+    linear-gradient(135deg, 
+      rgba(61,90,128,.03) 0%, 
+      rgba(238,108,77,.03) 100%),
+    rgba(224, 251, 252, 0.3);  /* Slight cyan tint */
 }
 
 /* Links and buttons */
