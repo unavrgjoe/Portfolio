@@ -42,9 +42,10 @@ section{
   position: relative;
   border-left: 4px solid var(--brand);
   background:
-    radial-gradient(circle at 20% 20%, rgba(238,108,77,.06), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(61,90,128,.04), transparent 40%),
-    var(--bg);
+    radial-gradient(1200px 600px at 10% -10%, rgba(238,108,77,.08), transparent 60%),  /* Orange tint */
+    radial-gradient(1000px 500px at 90% -20%, rgba(61,90,128,.06), transparent 60%),   /* Navy tint */
+    linear-gradient(180deg, var(--bg), #ffffff),  /* Light cyan to white */
+    var(--card);
 }
 section ul {
   margin-top: 1rem;
