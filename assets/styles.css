@@ -33,7 +33,7 @@ body{
   color: var(--txt);
   font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-}
+} 
 
 section{
   position: relative;
