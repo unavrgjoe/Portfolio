@@ -20,19 +20,43 @@ TODO remove what isnt used */
 
 html,body{height:100%;}
 body{
-  background:
-  var(--bg); 
+  background: linear-gradient(180deg, 
+    var(--bg) 0%,
+    #c9fee2 15%,
+    #9d8ea1 30%,
+    #cdaea8 45%,  
+    #d5c9c6 60%,  
+    #abbdc9 75%, 
+    #ffffff 90%,
+    var(--bg) 100%
+  ); 
   color: var(--txt);
   font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
 
 section{
-  background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(238,108,77,.08), transparent 60%),  /* Orange tint */
-    radial-gradient(1000px 500px at 90% -20%, rgba(61,90,128,.06), transparent 60%),   /* Navy tint */
-    linear-gradient(180deg, var(--bg), #ffffff),  /* Light cyan to white */
-    var(--card);
+  position: relative;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Subtle gradient shifts at section boundaries */
+section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100px;
+  background: radial-gradient(ellipse at center, 
+    rgba(238,108,77,0.02) 0%,  
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Links and buttons */
@@ -49,8 +73,12 @@ a:hover{text-decoration: underline;}
 
 /* Cards / post previews */
 .card, .post-preview, .project-card{
-  background: var(--card);
-  border: 1px solid rgba(255,255,255,.06);
+  background: linear-gradient(135deg, 
+    rgba(255,255,255,0.3) 0%, 
+    rgba(224,251,252,0.2) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
   border-radius: 14px;
   padding: 20px;
   box-shadow:
