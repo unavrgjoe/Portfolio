@@ -22,11 +22,11 @@ html,body{height:100%;}
 body{
   background: linear-gradient(180deg, 
     var(--bg) 0%,
-    #c9fee2 15%,
-    #9d8ea1 30%,
-    #cdaea8 45%,  
+    #e2f8ec 15%,
+    #e5dae8 30%,
+    #f1e1de 45%,  
     #d5c9c6 60%,  
-    #abbdc9 75%, 
+    #cbd9e2 75%, 
     #ffffff 90%,
     var(--bg) 100%
   ); 
@@ -131,6 +131,27 @@ img{border-radius: 12px;}
 }
 .hero-actions .btn:hover { transform: translateY(-1px); }
 .hero-actions .btn:focus { outline: 0; box-shadow: 0 0 0 4px var(--ring); }
+
+.btn, a[href*="github"], a[href*="itch.io"] {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 10px 10px 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, 
+    rgba(238,108,77,0.08) 0%, 
+    rgba(61,90,128,0.08) 100%
+  );
+  color: var(--txt);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(238,108,77,0.15);
+}
+
+.btn:hover, a[href*="github"]:hover, a[href*="itch.io"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba
+}
+
 
 /* responsive: stack the screens at < 900px */
 .project-content {
