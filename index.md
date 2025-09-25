@@ -7,7 +7,11 @@ title: Joseph Gross - Portfolio
 <section class="hero-section">
   <div class="intro">
     <h1>Joseph Gross</h1>
-    <p class="tagline">CS Senior  •  Full-Stack Developer  •  290+ GitHub Contributions in 2025</p>
+    <div class="hero-badges">
+      <span class="hero-badge">CS Senior</span>
+      <span class="hero-badge">Full-Stack Developer</span>
+      <span class="hero-badge stat">300+ GitHub Contributions in 2025</span>
+</div>
   </div>
 </section>
 

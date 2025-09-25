@@ -23,11 +23,11 @@ body{
   background: linear-gradient(180deg, 
     var(--bg) 0%,
     #e2f8ec 15%,
-    #e5dae8 30%,
+    /* #e5dae8 30%, */
     #f1e1de 45%,  
-    #d5c9c6 60%,  
+    /* #d5c9c6 60%,   */
     #cbd9e2 75%, 
-    #ffffff 90%,
+    /* #ffffff 90%, */
     var(--bg) 100%
   ); 
   color: var(--txt);
@@ -37,7 +37,7 @@ body{
 
 section{
   position: relative;
-  padding: 60px 20px;
+  padding: 10px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -195,13 +195,80 @@ img{border-radius: 12px;}
   margin-top: 8px;
 }
 
-/* Responsive - stacks everything vertically on mobile */
 @media (max-width: 900px) {
   .project-content {
-     grid-template-columns: 1fr; /* one column */
+     grid-template-columns: 1fr;
   }
   
   .screens, .demo-grid {
     justify-content: center;
   }
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, 
+    rgba(238,108,77,0.12) 0%, 
+    rgba(61,90,128,0.12) 100%
+  );
+  border: 1px solid rgba(238,108,77,0.2);
+  border-radius: 25px;
+  font-size: 0.95rem;
+  color: var(--txt);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(238,108,77,0.1);
+}
+
+/* Special styling for the GitHub stat badge */
+.hero-badge.stat {
+  background: linear-gradient(135deg, 
+    rgba(238,108,77,0.18) 0%, 
+    rgba(61,90,128,0.15) 100%
+  );
+  border-color: var(--brand);
+  font-weight: 600;
+  animation: subtle-glow 3s ease-in-out infinite;
+}
+.hero-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 12px rgba(238,108,77,0.25),
+    0 0 20px rgba(238,108,77,0.1);
+  background: linear-gradient(135deg, 
+    rgba(238,108,77,0.2) 0%, 
+    rgba(61,90,128,0.2) 100%
+  );
+}
+@keyframes subtle-glow {
+  0%, 100% {
+    box-shadow: 
+      0 2px 8px rgba(238,108,77,0.1),
+      0 0 15px rgba(238,108,77,0);
+  }
+  50% {
+    box-shadow: 
+      0 2px 8px rgba(238,108,77,0.2),
+      0 0 25px rgba(238,108,77,0.15);
+  }
+}
+@media (max-width: 600px) {
+  .hero-badges {
+    justify-content: center;
+  }
+  .hero-badge {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
 }
